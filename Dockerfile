@@ -2,8 +2,6 @@
 # ビルドコマンド:
 # docker build -t comfyui .
 #
-# 起動コマンド（GPU利用・ホスト全体マウント）:
-# docker run --gpus all -d -p 8188:8188 -v ./:/app --name comfyui_container comfyui
 # =============================
 
 FROM pytorch/pytorch:2.2.0-cuda12.1-cudnn8-runtime
