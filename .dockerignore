@@ -1,0 +1,70 @@
+# Exclude VCS
+.git
+.gitignore
+
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# Editor and OS files
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+*.swo
+*~
+
+# Logs and runtime
+*.log
+logs/
+tmp/
+temp/
+*.pid
+
+# Test caches and test folders (not needed for build)
+.pytest_cache/
+coverage/
+tests/
+tests-unit/
+
+# Build artifacts
+build/
+dist/
+pip-wheel-metadata/
+
+# Large model / output directories that should be mounted at runtime instead
+models/
+checkpoints/
+diffusers/
+diffusion_models/
+embeddings/
+loras/
+hypernetworks/
+outputs/
+result/
+outputs/
+presets/
+hf_download/
+downloads/
+
+# Local user data
+input/
+locales/
+outputs/
+
+# Node modules
+node_modules/
+
+# Misc
+*.sqlite3
+*.db
+*.bak
+
+# Keep Dockerfile and requirements.txt in context (don't ignore them)

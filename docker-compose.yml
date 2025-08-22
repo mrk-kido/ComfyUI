@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  comfyui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: comfyui
+    container_name: comfyui_container
+    restart: unless-stopped
+    ports:
+      - "8188:8188"
+    volumes:
+      - ./:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    shm_size: '1gb'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['1']
+              capabilities: [gpu]
+
+    # Equivalent to: docker run --gpus all -d -p 8188:8188 -v ./:/app --name comfyui_container comfyui
